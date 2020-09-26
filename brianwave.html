@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href ="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom_css.css">
+    <script src="js/d3.v4.min.js"></script>
+    
+    
+    <title>Brainwave Visualization</title>
+  </head>
+  <body>
+    <div class="container">
+
+        <div class="row" id="row_title" style="text-align: center;">
+          <div class="col">
+            <h1 style="color: rgb(25, 231, 221);">Brainwave Visualization</h1>
+          </div>
+          
+        </div>
+
+        <div class="row" id="row_0">
+          <div class="col" style="text-align: center;">
+            <button type="button" class="btn btn-primary btn-lg">Raw Brainwave Data (updated every 2 seconds)</button>
+            <h5 id="sensor_status">Bad connection and/or electrode not touching the skin</h5>
+            <script src="js/noise_status.js"></script>
+          </div>
+            
+
+        </div>
+        <hr>
+        <div class="row" id="row_1">
+
+          <div class="col" style="text-align: center;">
+              <h3 style="color: rgb(25, 231, 221);">Raw Brainwave Data</h3>
+              <div id="raw_value"></div>
+              <script src="js/raw_value.js"></script>
+          </div>
+        </div>
+        <hr>
+        <div class="row" id="row_2">
+          <div class="col" style="text-align: center;">
+            <h3 style="color: rgb(25, 138, 231);">Brainwave Bands Strength</h3>
+            <h5 style="color: rgb(25, 138, 231);"> &lt;------- Low <span style="color: rgb(212, 160, 17);">Brain Activity</span> High --------&gt;</h5>
+            <div id="band_value"></div>
+            <script src="js/bands_value.js"></script>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="row" id="row_3">
+          <div class="col" style="text-align: center;">
+            <h3 style="color: rgb(231, 142, 25);">Welch's Periodogram</h3>
+            <div id="welch_value"></div>
+            <script src="js/welch_value.js"></script>
+          </div>
+        </div>
+
+        <hr>
+        <div class="row" id="row_4">
+          <div class="col" style="text-align: center;">
+            <h3 style="color: rgb(129, 236, 115);">Brainwave Spectrogram</h3>
+            <div id="spectrogram">
+              <img id='spect_img' src="data/spectrogram.png?1576573831">
+            </div>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="row" id="row_5">
+          <div class="col" style="text-align: center;">
+            <h3 style="color:rgb(6, 161, 167);">Brainwave Sound Visualization (if you can hear it)</h3>
+            <div id="sound_value"></div>
+            <script src="js/sound_value.js"></script>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="row" id="row_6">
+          
+          <div class="col" style="text-align: center;">
+            <h3 style="color: rgb(6, 161, 167);">Brainwave Audio</h3>
+            <audio controls>
+                <source id = "audio_data" src="data/brain_wave_sound.mp3?1576573831" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+
+
+        </div>
+
+        <hr>
+
+    </div>
+
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  
+  </body>
+</html>
