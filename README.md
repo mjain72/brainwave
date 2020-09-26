@@ -1,5 +1,6 @@
 
-Detection and visualization of brainwaves using Python, D3 and Bootstrap
+ Detection and visualization of brainwaves using Python, D3 and Bootstrap
+ ________________________________________________________________________
 
 This code allows you to use TGAM Brainwave sensor and visualize the data using python and D3. 
 
